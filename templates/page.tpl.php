@@ -158,7 +158,7 @@
       </div>
     <?php endif; ?>
 
-    <div class="dtu-logo"><a href="http://www.dtu.dk/"><img src="<?php print $base_url . '/'. $directory; ?>/images/default/dtu-logo.png"></a></div>
+    <div class="dtu-logo"><a href="http://www.dtu.dk/"><img src="<?php print $base_url . '/'. $directory; ?>/images/default/dtu-logo-clear.png"></a></div>
 
     <?php if ($search_box): ?>
     <div id="search-box"><?php print $search_box; ?></div>
@@ -206,7 +206,7 @@
       <?php print $highlight; ?>
 
       <?php print $breadcrumb; ?>
-      <?php if ($title): ?>
+      <?php if ($title && !$is_front): ?>
       <h1 class="title"><?php print $title; ?></h1>
       <?php endif; ?>
       <?php print $messages; ?>

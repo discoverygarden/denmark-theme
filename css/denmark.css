@@ -140,6 +140,15 @@ table tr th
 
 /* Header */
 
+#logo
+{
+  margin: 9px 0px;
+}
+
+.dtu-cdio #logo
+{
+}
+
 #header-wrapper
 {
   width: 100%;
@@ -165,7 +174,7 @@ table tr th
   float: left;
   width: 113px;
   height: 76px;
-  margin: 5px 0px 0px 45px;
+  margin: 5px 0px 0px 35px;
 
   background: url('../images/default/cdio-logo.png') center top no-repeat transparent;
 }
@@ -195,7 +204,7 @@ table tr th
   float: left;
   /*width: 322px;*/
   height: 32px;
-  margin: 20px 0px 0px 205px;
+  margin: 25px 25px 0px 180px;
 
   color: #990000;
   font-size: 37px;
@@ -220,16 +229,31 @@ h1#site-name
   margin: 17px 0px 0px 35px;
 
   background: url('../images/default/cdio-header.png') center top no-repeat transparent;
+  
+  text-indent: -999em;
+  width: 497px;
 }
 
 .dtu-logo
 {
   float: right;
-  width: 43px;
+  width: 256px;
   height: 63px;
   margin: 10px 0px 0px 0px;
 
+  background: url('../images/default/dtu-logo-full.png') right top no-repeat transparent;
+}
+
+.dtu-cdio .dtu-logo
+{
+  width: 56px;
+  height: 63px;
   background: url('../images/default/dtu-logo.png') center top no-repeat transparent;
+}
+
+.dtu-logo a img {
+  width: 100%;
+  height: 100%;
 }
 
 #header #site-name a,
@@ -246,8 +270,18 @@ h1#site-name
   width: 100%;
   height: 36px;
 
+  margin: 5px 0px 0px 0px;
+  
+/*  background: url('../images/default/navigation-bg.jpg') center top repeat-x transparent;*/
+/*  border-top: 1px solid #eee;*/
+}
+
+.dtu-cdio #navigation-wrapper
+{
   background: url('../images/default/navigation-bg.jpg') center top repeat-x transparent;
 
+  margin: 0px 0px 0px 0px;
+  
   border-top: 1px solid #eee;
 }
 
@@ -258,6 +292,22 @@ h1#site-name
   height: 36px;
   margin: 0px auto;
 
+}
+
+#navigation ul#main-menu
+{
+  height: 36px;
+/*  padding: 1px 0px 0px 0px;*/
+  background-color: #990000;
+  border: 1px solid #990000;
+}
+
+.dtu-cdio #navigation ul#main-menu
+{
+  height: auto;
+/*  padding: 1px 0px 0px 0px;*/
+  background-color: transparent;
+  border: 0px;
 }
 
 #navigation ul#main-menu li
@@ -271,17 +321,58 @@ h1#site-name
   float: left;
   height: 16px; /* 36px */
   padding: 11px 30px 7px 30px;
+  font-size: 13px;
 
-  color: #333;
+/*  border-left: 1px solid #990000;*/
+/*  border-right: 1px solid #990000;*/
+  
+  color: #fff;
   text-decoration: none;
+}
+
+.dtu-cdio #navigation ul#main-menu li a
+{
+  padding: 11px 20px 7px 20px;
+}
+
+.dtu-cdio #navigation ul#main-menu li a
+{
+  color: #666;
 }
 
 #navigation ul#main-menu li a:hover
 {
-  /*background: #cecece;*/
-  /*color: #999;*/
-  border-bottom: 3px solid #999;
+/*  text-decoration: underline;*/
+/*  background-color: #A51D1D;*/
+  background-color: #B02C2C;
 }
+
+.dtu-cdio #navigation ul#main-menu li a:hover
+{
+  border-bottom: 3px solid #999;
+  background-color: transparent;
+}
+
+#navigation ul#main-menu li a.active
+{
+  background: #fff;
+  color: #990000;
+/*  border-bottom: 3px solid #999;*/
+}
+
+.dtu-cdio #navigation ul#main-menu li a.active
+{
+  border-bottom: 3px solid #666666;
+  background-color: transparent;
+  color: #666;
+}
+
+
+#navigation ul#main-menu li a.active:hover
+{
+  text-decoration: none;
+}
+
 
 #navigation ul#main-menu li a.active
 {
@@ -289,7 +380,7 @@ h1#site-name
 
   /*background: #d9d9d9;*/
 
-  border-bottom: 3px solid #666666;
+/*  border-bottom: 3px solid #666666;*/
   /*background: #949494; *//* Old browsers */
   /*background: -moz-linear-gradient(top,  #949494 0%, #bbbbbb 17%); *//* FF3.6+ */
   /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#949494), color-stop(17%,#bbbbbb)); *//* Chrome,Safari4+ */
@@ -436,7 +527,8 @@ h1#site-name
   padding: 10px;
 }
 
-.islandora_solr_results tr.hidden {
+.islandora_solr_results tr.hidden,
+tr.hidden {
   display: none;
 }
 
@@ -534,12 +626,14 @@ form#islandora-solr-simple-search-form input.form-submit {
   color: #9a0000;
 }
 
-td.toggle-plus
+td.toggle-plus,
+span.toggle-plus
 {
   background: url('../images/expand.png') no-repeat center center;
 }
 
-td.toggle-minus
+td.toggle-minus,
+span.toggle-minus
 {
   background: url('../images/contract.png') no-repeat center center;
 }
@@ -554,4 +648,14 @@ table .toggle-solr-row.odd:hover,
 table .toggleable-solr-row.odd:hover
 {
   background-color: #f4f4f4;
+}
+
+
+
+/* block tweak to prevent overlay links colliding with the "Show less" links */
+
+div.block.with-block-editing
+{
+  float: left;
+  width: 100%;
 }

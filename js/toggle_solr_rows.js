@@ -6,7 +6,7 @@ jQuery(document).ready(function() {
   //});
   jQuery(".toggle-solr-row").click(function()
   {
-    jQuery(this).parent().next(".toggleable-solr-row").toggleClass('hidden');
+    jQuery(this).parent().parent().next(".toggleable-solr-row").toggleClass('hidden');
     jQuery(this).toggleClass('toggle-plus');
     jQuery(this).toggleClass('toggle-minus');
   });
